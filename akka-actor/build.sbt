@@ -8,5 +8,8 @@ lazy val actor = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "akka-actor",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies ++= Seq(
+      akkaActor,
+      scalaTest % Test
+    )
   )
